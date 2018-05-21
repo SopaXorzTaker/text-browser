@@ -133,7 +133,7 @@ class Browser(object):
 
                             input_value = None
 
-                            while available_values and input_value not in available_values:
+                            while (available_values and input_value not in available_values) or not input_value:
                                 input_value = input("Value: ")
 
                             self.forms[form_index].set_input(input_name, input_value)
